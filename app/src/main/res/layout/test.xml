@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="linearButtonAction"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="313dp"
+            android:layout_height="288dp"
+            android:layout_marginTop="233dp"
+            android:text="FONDO"
+            android:textSize="90sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="64dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
