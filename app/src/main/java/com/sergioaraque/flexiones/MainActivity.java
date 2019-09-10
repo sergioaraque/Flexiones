@@ -19,4 +19,11 @@ public class MainActivity extends AppCompatActivity {
         //myIntent.putExtra("key", value); //Optional parameters
         MainActivity.this.startActivity(myIntent);
     }
+
+
+    public void lanzarTes2t(View v) {
+        Intent myIntent = new Intent(MainActivity.this, Flexiones.class);
+        //myIntent.putExtra("key", value); //Optional parameters
+        MainActivity.this.startActivity(myIntent);
+    }
 }
