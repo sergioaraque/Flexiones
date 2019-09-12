@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Flexiones</string>
+    <string name="ahora_podr_s_medir_todas_las_flexiones_que_hagas">Ahora podrás medir todas las flexiones que hagas</string>
+    <string name="button">Button</string>
+    <string name="flexiones_app">Flexiones App</string>
+    <string name="iniciar">Iniciar</string>
 </resources>
