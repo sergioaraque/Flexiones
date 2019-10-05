@@ -23,8 +23,8 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="278dp"
+                android:layout_height="121dp"
                 android:text="@string/flexiones_app"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display2"
                 android:textStyle="bold"
@@ -39,20 +39,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/ahora_podr_s_medir_todas_las_flexiones_que_hagas" />
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <Button
-                android:id="@+id/button"
-                style="@android:style/Widget.Holo.Light.Button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="lanzarTest"
-                android:text="@string/button" />
 
             <Button
                 android:id="@+id/button2"
@@ -62,12 +55,13 @@
                 android:onClick="lanzarTes2t"
                 android:text="@string/iniciar" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:srcCompat="@drawable/icono" />
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="116dp"
+            app:srcCompat="@drawable/icono" />
 
     </LinearLayout>
 
