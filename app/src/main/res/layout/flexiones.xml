@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -15,6 +15,13 @@
             android:onClick="volverInicio"
             android:text="Salir" />
 
+        <Button
+            android:id="@+id/btnParar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="pararCronometro"
+            android:text="Pausa" />
+
         <LinearLayout
             android:id="@+id/linearLayoutContador"
             android:layout_width="match_parent"
@@ -26,14 +33,15 @@
                 android:id="@+id/tvContador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp" />
+                android:textSize="36sp" />
 
             <Chronometer
                 android:id="@+id/simpleChronometer"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textSize="36sp" />
 
         </LinearLayout>
 
     </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
