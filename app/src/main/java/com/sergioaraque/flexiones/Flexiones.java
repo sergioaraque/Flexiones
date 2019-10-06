@@ -1,17 +1,22 @@
 package com.sergioaraque.flexiones;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+
+
 public class Flexiones extends AppCompatActivity {
 
     LinearLayout linearLayoutContador;
-    TextView tvContador;
+    TextView tvContador, tvResultado;
     Chronometer simpleChronometer;
     Button btnParar;
 
@@ -26,10 +31,12 @@ public class Flexiones extends AppCompatActivity {
         btnParar = (Button) findViewById(R.id.btnParar);
         linearLayoutContador = (LinearLayout) findViewById (R.id.linearLayoutContador);
         tvContador = (TextView) findViewById(R.id.tvContador);
+        tvResultado = (TextView) findViewById(R.id.tvResultado);
 
         tvContador.setText(contador + " flexiones");
 
         simpleChronometer = (Chronometer) findViewById(R.id.simpleChronometer); // initiate a chronometer
+        simpleChronometer.setBase(SystemClock.elapsedRealtime());
         simpleChronometer.start(); // start a chronometer
         simpleChronometer.setFormat("Tiempo activo - %s"); // set the format for a chronometer
     }
@@ -46,5 +53,17 @@ public class Flexiones extends AppCompatActivity {
     public void pararCronometro(View v) {
         simpleChronometer.stop();
         btnParar.setVisibility(View.INVISIBLE);
+        calcularMedia();
+
+    }
+
+    public void calcularMedia() {
+        Log.e("Test", "Testtt");
+        long segundos =  (SystemClock.elapsedRealtime() - simpleChronometer.getBase()) / 1000;
+        Log.e("SEGUNDOS", segundos + "");
+        Log.e("FLEXIONES", contador + "");
+        float resultado = (float) segundos / contador;
+        Log.e("Resultado", resultado + "");
+        tvResultado.setText("Has hecho " + contador + " flexiones en " + segundos + " segundos. Esto da una media de " + resultado + " segundos por flexión");
     }
 }
