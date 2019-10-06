@@ -11,8 +11,6 @@ import android.widget.Chronometer;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-
-
 public class Flexiones extends AppCompatActivity {
 
     LinearLayout linearLayoutContador;
@@ -58,12 +56,8 @@ public class Flexiones extends AppCompatActivity {
     }
 
     public void calcularMedia() {
-        Log.e("Test", "Testtt");
         long segundos =  (SystemClock.elapsedRealtime() - simpleChronometer.getBase()) / 1000;
-        Log.e("SEGUNDOS", segundos + "");
-        Log.e("FLEXIONES", contador + "");
         float resultado = (float) segundos / contador;
-        Log.e("Resultado", resultado + "");
         tvResultado.setText("Has hecho " + contador + " flexiones en " + segundos + " segundos. Esto da una media de " + resultado + " segundos por flexión");
     }
 }
