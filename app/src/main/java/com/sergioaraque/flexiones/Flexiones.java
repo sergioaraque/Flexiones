@@ -17,6 +17,7 @@ public class Flexiones extends AppCompatActivity {
     TextView tvContador, tvResultado;
     Chronometer simpleChronometer;
     Button btnParar;
+    boolean fin = false;
 
     int contador = 0;
 
@@ -40,8 +41,10 @@ public class Flexiones extends AppCompatActivity {
     }
 
     public void linearButtonAction (View v) {
-        contador += 1;
-        tvContador.setText(contador + " flexiones");
+        if (fin == false) {
+            contador += 1;
+            tvContador.setText(contador + " flexiones");
+        }
     }
 
     public void volverInicio(View v) {
@@ -52,6 +55,7 @@ public class Flexiones extends AppCompatActivity {
         simpleChronometer.stop();
         btnParar.setVisibility(View.INVISIBLE);
         calcularMedia();
+        fin = true;
 
     }
 
